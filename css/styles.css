@@ -187,6 +187,11 @@ img {
     margin-bottom: 2rem;
 }
 
+.button:hover {
+  padding: 1.1rem 3.3rem;
+  /*font-size: 1.9rem;*/
+}
+
 @media (min-width: 768px) {
     .button {
         /* Es como un elemento inline con algunas características de block. Aquí lo usamos para que respete el margin-bottom */
@@ -215,13 +220,15 @@ img {
     margin-top: 2rem;
 }
 
-.widget-course p {
+.widget-course p,
+.course p {
     font-family: var(--headingFont);
     font-weight: 700;
     font-size: 2rem;
 }
 
-.widget-course p span {
+.widget-course p span,
+.course p span {
     font-weight: 400;
 }
 
@@ -229,4 +236,37 @@ img {
     background-color: var(--black);
     padding-bottom: 5rem;
     margin-top: 4rem;
+}
+
+/* ABOUT US */
+
+@media (min-width: 768px) {
+  .about-us {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2rem;
+  }
+}
+
+/* COURSES */
+
+.course {
+  padding: 3rem 0;
+  border-bottom: 1px solid var(--gray);
+}
+
+@media (min-width: 768px) {
+  .course {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    column-gap: 2rem;
+  }
+}
+
+.course:last-of-type {
+  border-bottom: none;
+}
+
+.course__description {
+  margin-bottom: 0;
 }
