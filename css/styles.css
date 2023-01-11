@@ -88,8 +88,17 @@ img {
 
 /* HEADER */
 
-.header {
+/* Si el navegador soporta webp, se usa este selector */
+.webp .header {
+  background-image: url(../img/banner.webp);
+}
+
+/* Si el navegador no soporta webp, se usa este selector */
+.no-webp .header {
   background-image: url(../img/banner.jpg);
+}
+
+.header {
   height: 60rem;
   background-size: cover;
   background-repeat: no-repeat;
@@ -187,7 +196,7 @@ img {
   font-size: 1.8rem;
   text-transform: uppercase;
   font-weight: bold;
-  padding: 1rem 3rem;
+  padding: 1rem 3rem 1rem 3rem;
   border-radius: 1rem;
   margin-bottom: 2rem;
 }
@@ -311,7 +320,11 @@ img {
   flex: 1;
   border: 1px solid var(--gray);
   border-radius: 1rem;
-  padding-left: 1rem;
+  /*padding-left: 1rem;*/
+}
+
+.button--contact:hover {
+  padding: 1.1rem 3.3rem 1.1rem 3rem;
 }
 
 @media (max-width: 768px) {
